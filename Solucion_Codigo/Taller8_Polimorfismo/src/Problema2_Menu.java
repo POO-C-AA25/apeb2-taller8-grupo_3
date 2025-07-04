@@ -17,7 +17,8 @@ public class Problema2_Menu {
         System.out.println(m2);
         System.out.println(m3);
         System.out.println(m4);
-        System.out.printf("Subtotal: \n" + cuenta.getSubtotal());
+        cuenta.calcularSubtotal();
+        System.out.printf("Subtotal: %.2f\n", cuenta.getSubtotal());
     }       
 }
 abstract class Menu{
