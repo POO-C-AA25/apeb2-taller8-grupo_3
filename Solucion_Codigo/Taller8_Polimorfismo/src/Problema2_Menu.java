@@ -13,9 +13,13 @@ public class Problema2_Menu {
         Cuenta cuenta = new Cuenta("Diego Armando", menus, 0.12);
         System.out.println("---Cuenta cliente---");
         System.out.println("Cliente: " + "Diego Armando");
+        m1.calcularValorMenu();
         System.out.println(m1);
+        m2.calcularValorMenu();
         System.out.println(m2);
+        m3.calcularValorMenu();
         System.out.println(m3);
+        m4.calcularValorMenu();
         System.out.println(m4);
         cuenta.calcularSubtotal();
         System.out.printf("Subtotal: %.2f\n", cuenta.getSubtotal());
