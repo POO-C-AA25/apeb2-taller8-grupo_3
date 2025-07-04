@@ -16,7 +16,7 @@ public class Problema1_JuegoRoles{
             mago.batallasGanadas += 1;
             guerrero.vidas -= 1;
         }
-        sout.println("Guerrero: " + guerrero + "Mago"+ mago);
+        system.out.println("Guerrero: " + guerrero + "Mago"+ mago);
 
 }
 abstract class Personaje {
