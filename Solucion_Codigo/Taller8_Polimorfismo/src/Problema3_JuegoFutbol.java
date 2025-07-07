@@ -77,7 +77,7 @@ abstract class Jugador {
     @Override
     public String toString() {
         return "Nombre: " + nombre + ", Numero de Jugador: " + num_Jugador + ", RUT: " + RUT +
-                ", Goles: " + num_Goles + ", Valoración: " + valoracion;
+                ", Goles: " + num_Goles + ", Valoracion: " + valoracion;
     }
 }
 

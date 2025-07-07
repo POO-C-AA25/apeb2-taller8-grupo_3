@@ -22,10 +22,11 @@ Un diagrama exclusivo que involucren las funcionalidades principales del juego.
 Una solución en lenguaje de programación Java. Usar Polimorfismo en la solución.
 Clase de prueba/ejecutor, que demuestre la funcionalidad del juego.
  */
-public class Problema1_JuegoRoles {
+public class Problema1_EjecutorJuegoRoles {
     public static void main(String[] args) {
         Personaje guerrero = new Guerrero(5, 12, 0, 0, "Fuerza Bruta", "Ataque Directo");
         Personaje mago = new Mago(6, 10, 0, 0, "Hechizos Poderosos", "Estrategia Magica");
+        Personaje arquero = new Arquero(4, 8, 0, 0, "Disparo Certero", "Ataque a Distancia");
 
         while (guerrero.vidas > 0 && mago.vidas > 0) {
             if (guerrero.atacar(mago)) {
@@ -59,6 +60,14 @@ abstract class Personaje {
     public String habilidad;
     public String estrategia;
 
+    public Personaje(int vidas, int experiencia, int batallasGanadas, String habilidad, String estrategia) {
+        this.vidas = vidas;
+        this.experiencia = experiencia;
+        this.batallasGanadas = batallasGanadas;
+        this.habilidad = habilidad;
+        this.estrategia = estrategia;
+    }
+
     public abstract boolean atacar(Personaje personaje);
     public abstract int defender();
 
@@ -72,12 +81,8 @@ class Guerrero extends Personaje {
     public int fuerza;
 
     public Guerrero(int fuerza, int vidas, int experiencia, int batallasGanadas, String habilidad, String estrategia) {
+        super(vidas, experiencia, batallasGanadas, habilidad, estrategia);
         this.fuerza = fuerza;
-        this.vidas = vidas;
-        this.experiencia = experiencia;
-        this.batallasGanadas = batallasGanadas;
-        this.habilidad = habilidad;
-        this.estrategia = estrategia;
     }
 
     public boolean atacar(Personaje personaje) {
@@ -101,12 +106,8 @@ class Mago extends Personaje {
     public int poderMagico;
 
     public Mago(int poderMagico, int vidas, int experiencia, int batallasGanadas, String habilidad, String estrategia) {
+        super(vidas, experiencia, batallasGanadas, habilidad, estrategia);
         this.poderMagico = poderMagico;
-        this.vidas = vidas;
-        this.experiencia = experiencia;
-        this.batallasGanadas = batallasGanadas;
-        this.habilidad = habilidad;
-        this.estrategia = estrategia;
     }
 
     public boolean atacar(Personaje personaje) {
@@ -130,12 +131,8 @@ class Arquero extends Personaje {
     public int precision;
 
     public Arquero(int precision, int vidas, int experiencia, int batallasGanadas, String habilidad, String estrategia) {
+        super(vidas, experiencia, batallasGanadas, habilidad, estrategia);
         this.precision = precision;
-        this.vidas = vidas;
-        this.experiencia = experiencia;
-        this.batallasGanadas = batallasGanadas;
-        this.habilidad = habilidad;
-        this.estrategia = estrategia;
     }
 
     public boolean atacar(Personaje personaje) {

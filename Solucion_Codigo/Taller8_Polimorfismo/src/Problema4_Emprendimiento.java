@@ -32,18 +32,15 @@ public class Problema4_Emprendimiento {
         artesanal.contactos.add(new Contacto("Maria Lopez", "Calle 45", "0987654321"));
         artesanal.mentores.add(new Mentor("Carlos Ruiz"));
 
-        mostrarEmprendimiento(tecnologico);
+        System.out.println(tecnologico.toString());
+        System.out.println("Actividad: " + tecnologico.actividadParticipar());
         tecnologico.evolucionar();
         System.out.println();
 
-        mostrarEmprendimiento(artesanal);
+        System.out.println(artesanal.toString());
+        System.out.println("Actividad: " + artesanal.actividadParticipar());
         artesanal.evolucionar();
         System.out.println();
-    }
-
-    public static void mostrarEmprendimiento(Emprendimiento emprendimiento) {
-        System.out.println(emprendimiento.toString());
-        System.out.println("Actividad: " + emprendimiento.actividadParticipar());
     }
 }
 
@@ -65,7 +62,7 @@ abstract class Emprendimiento {
     public abstract String actividadParticipar();
 
     public void evolucionar() {
-        System.out.println("El emprendimiento " + nombre + " esta creciendo y ampliando sus productos.");
+        System.out.println("El Emprendimiento " + nombre + " esta creciendo y ampliando sus productos.");
     }
 
     public String toString() {
