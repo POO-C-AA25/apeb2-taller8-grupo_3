@@ -1,7 +1,7 @@
 public class Problema1_JuegoRoles{
-    static guerrero;
-    static mago;
-    static arquero;
+    static Guerrero guerrero;
+    static Mago mago;
+    static Arquero arquero;
     public static void main(String[] args) {
         guerrero = new Guerrero();
         mago = new Mago();
@@ -16,13 +16,16 @@ public class Problema1_JuegoRoles{
             mago.batallasGanadas += 1;
             guerrero.vidas -= 1;
         }
-        system.out.println("Guerrero: " + guerrero + "Mago"+ mago);
+        System.out.println("Guerrero: " + guerrero + "Mago"+ mago);
+    }
 
 }
 abstract class Personaje {
     public int vidas;
     public int experiencia;
     public int batallasGanadas;
+    public String habilidad;
+    public String estrategia;
 
     public abstract boolean atacar(Personaje personaje);
     public abstract int defender();
@@ -33,16 +36,12 @@ abstract class Personaje {
 }
 
 class Guerrero extends Personaje{
-    public String hablilidad;
-
     public boolean atacar(Personaje personaje) {
         int bandera;
-        return ((int) math.random() * 2) == 1 ? true : false;
+        return ((int) Math.random() * 2) == 1 ? true : false;
     }
     public int defender() {
-        public boolean defender() {
-            return 0;
-        }
+        return 0;
     }
 
     public String toString() {
@@ -52,25 +51,21 @@ class Guerrero extends Personaje{
 }
 
 class Mago extends Personaje{
-        public boolean atacar() {
+    public boolean atacar(Personaje personaje) {
         return false;
     }
     public int defender() {
-        public boolean defender() {
-            return 0;
-        }
+        return 0;
     }
 
 }
 
 class Arquero extends Personaje{
-        public boolean atacar() {
+        public boolean atacar(Personaje personaje) {
         return false;
     }
     public int defender() {
-        public boolean defender() {
-            return 0;
-        }
+        return 0;
     }
 
 }   
