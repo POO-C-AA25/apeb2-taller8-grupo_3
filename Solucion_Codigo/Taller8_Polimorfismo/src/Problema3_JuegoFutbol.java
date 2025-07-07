@@ -1,3 +1,38 @@
+/**
+ * Problema 3 - Juego de fútbol "Estadísticas"
+Se desea realizar una aplicación que permita a un periodista deportivo llevar las estadísticas de los jugadores de un equipo de fútbol para poder valorar su actuación en el partido.
+
+Cada jugador se identifica por su nombre, número de dorsal y Rut
+
+Los jugadores se dividen en tres categorías:
+
+Atacantes
+Defensores
+Porteros
+Para todos los jugadores se desea contabilizar el número de goles marcados,
+además en el caso de los jugadores de campo se contabilizan los pases realizados con éxito y el número de balones recuperados.
+En el caso de los porteros se contabilizan las atajadas realizadas.
+
+Valoración del jugador
+Cálculo base para todos los jugadores:
+
+valor_goles = goles * 30
+Valor adicional según tipo de jugador:
+
+Atacantes
+
+valor += recuperaciones * 3
+Defensores
+
+valor += recuperaciones * 4
+Porteros
+
+valor += atajadas * 5
+Note
+
+Se debe aplicar polimorfismo mediante la aplicación de herencia, encapsulamiento de atributos y comportamientos comunes, y especializar comportamiento según el tipo de jugador.
+ */
+
 public class Problema3_JuegoFutbol {
     public static void main(String[] args) {
 
