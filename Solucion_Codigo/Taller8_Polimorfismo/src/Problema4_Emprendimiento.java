@@ -34,12 +34,12 @@ public class Problema4_Emprendimiento {
 
         System.out.println(tecnologico.toString());
         System.out.println("Actividad: " + tecnologico.actividadParticipar());
-        tecnologico.evolucionar();
+        System.out.println(tecnologico.evolucionar());
         System.out.println();
 
         System.out.println(artesanal.toString());
         System.out.println("Actividad: " + artesanal.actividadParticipar());
-        artesanal.evolucionar();
+        System.out.println(artesanal.evolucionar());
         System.out.println();
     }
 }
@@ -61,8 +61,8 @@ abstract class Emprendimiento {
 
     public abstract String actividadParticipar();
 
-    public void evolucionar() {
-        System.out.println("El Emprendimiento " + nombre + " esta creciendo y ampliando sus productos.");
+    public String evolucionar() {
+        return ("El Emprendimiento " + nombre + " esta creciendo y ampliando sus productos.");
     }
 
     public String toString() {
