@@ -95,6 +95,7 @@ class MenuNiño extends Menu{
         this.valorHelado = valorHelado;
         this.valorPastel = valorPastel;
     }
+    @Override
     public void calcularValorMenu(){
         this.valorMenu = valorInicial + valorHelado + valorPastel;
     }
