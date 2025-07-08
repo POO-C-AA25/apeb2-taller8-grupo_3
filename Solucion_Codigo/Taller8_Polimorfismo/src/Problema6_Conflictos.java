@@ -1,10 +1,38 @@
-
+/***
+ * La ONU le solicita desarrollar un simulador de conflictos bélicos mundiales en el lenguaje de alto nivel orientado a objetos Java, 
+ * considerando sus cuatro pilares fundamentales: abstracción, encapsulamiento, herencia y polimorfismo, cumpliendo con los siguientes lineamientos:
+ *Requisitos Funcionales
+ * De manera general, cada nación debe ser representada con la siguiente información: Nombre de la nación, Número de habitantes de la nación, 
+ * Cantidad de recursos económicos disponibles, Nivel de poder militar (valor entre 1 y 100), su estado de conflicto que indica si la nación 
+ * está actualmente en conflicto o no, y cualquier otra información que usted considere necesaria. No olvide implementar los métodos y/o 
+ * constructores básicos para procesar esta información dados todos los requerimientos.
+ * A su vez se requiere la información de las naciones desarrolladas con alta tecnología militar, como: Si la nación dispone de tecnología 
+ * avanzada. Para estas naciones avanzadas, implementar el cálculo del impacto, el cual considera un bono de tecnología para el incremento 
+ * de su poder militar (no olvide que para este último la restricción es de 1-100, y en el caso de sobre pasar, asigne directamente 100).
+ * De igual forma se necesita conocer de las naciones en vías de desarrollo su nivel de recursos limitados (recursos económicos y poder militar 
+ * por cada N habitantes), así como la implementación del cálculo del impacto, el cual reduce el impacto en el conflicto debido a sus recursos 
+ * limitados. Queda a su criterio matemático y/o estadístico el planteamiento del modelo matemático (con las variables/parámetros que tenga a bien) 
+ * para calcular este factor de impacto.
+ * Para las naciones desarrolladas o en vías de desarrollo, considere sus naciones aliadas, lo cual es decisivo para incrementar o decrementar 
+ * su nivel de impacto directamente a su poder militar, pero solo si tiene aliados disponibles.
+ * El programa debe permitir declarar conflictos entre dos naciones seleccionadas con un proceso aleatorio/randomico.
+ * Calcular las consecuencias del conflicto utilizando polimorfismo y la implementación de cálculo de impacto.
+ * Consecuencias del conflicto:
+ * Reducción del 5% de población por cada diferencia en los niveles de poder militar.
+ * Reducción del 10% de recursos de la nación derrotada.
+ * Si las naciones tienen el mismo nivel de poder militar, ambas pierden el 5% de recursos.
+ * Al finalizar el programa, debe mostrar un reporte con el estado actual de cada nación (población, recursos y estado de conflicto, etc), 
+ * así como el total de conflictos que se simularon entre N naciones.
+ * Note
+ * Reporte Final
+ * Al finalizar la simulación, debe generarse un reporte general que contenga:
+ * Estado actual de cada nación (población, recursos, estado de conflicto, etc.)
+ * Total de conflictos simulados entre N naciones.
+ */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 public class Problema6_Conflictos {
-
     public static void main(String[] args) {
         Conflicto simulador = new Conflicto();
         Nacion n1 = new NacionDesarrollada("USA", 300_000_000, 15000.0, 85, true);
@@ -22,7 +50,6 @@ public class Problema6_Conflictos {
         for (int i = 0; i < 3; i++) {
             simulador.iniciarConflicto();
         }
-
         simulador.mostrarReporteFinal();
     }
 }

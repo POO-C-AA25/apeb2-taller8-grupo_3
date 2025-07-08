@@ -1,3 +1,19 @@
+/***
+ * Una red de monitoreo ambiental tiene como objetivo registrar, analizar y reportar los impactos del cambio climático en diferentes 
+ * regiones. En cada ubicación se instalan dispositivos capaces de medir distintos indicadores climáticos como temperatura, precipitación, 
+ * calidad del aire, y humedad del suelo. Dependiendo de la región (costa, sierra y oriente), los dispositivos pueden variar en capacidades 
+ * y protocolos de recolección.
+ * Los datos recolectados deben almacenarse y analizarse periódicamente. Además, ciertas ubicaciones requieren generar reportes personalizados 
+ * que destaquen riesgos ambientales como sequías, deslizamientos o contaminación del aire. Algunos dispositivos pueden comportarse de forma 
+ * especializada para detectar únicamente ciertos tipos de indicadores dependiendo de la región (costa, sierra y oriente).
+ * Requisitos funcionales:
+ * Representar diferentes tipos de dispositivos y sus especializaciones, para la costa, sierra y oriente.
+ * Implementar métodos polimórficos que permitan procesar los datos según los tipos de dispositivos y sus especializaciones, para la costa, 
+ * sierra y oriente.
+ * Generar reportes dinámicos en función del tipo de riesgo ambiental detectado según la región
+ * Note
+ * Plantee una solución polimórfica dada una jerarquía de clases con ventajas de herencia. Y para la generación de reportería, use los toString() base.
+ */
 import java.util.Arrays;
 import java.util.List;
 public class Problema4_Monitoreo {
